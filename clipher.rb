@@ -2,9 +2,9 @@
 
 def caesar_cipher(message, key)
   message.each_char do | char|
-    if char =~ /[a-z]/
+    if /[a-z]/.match(char)
       print (((char.ord - 97 + key) % 26) + 97).chr
-    elsif char =~ /[A-Z]/
+    elsif /[A-Z]/.match(char)
       print (((char.ord - 65 + key) % 26) + 65).chr
     else
       print char
